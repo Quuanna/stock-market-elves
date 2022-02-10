@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Stock</string>
+
+    <string name="title_1">短線投資</string>
+    <string name="title_2">價值型投資</string>
+    <string name="title_3">成長型投資</string>
+    <string name="title_4">穩定投資</string>
+
+    <string name="text_1_profit">短時間內低價買入高價賣出，以賺取價差。</string>
+    <string name="text_1_target">選擇目前主流及主力買進的個股。</string>
+    <string name="text_1_have_skills">技術分析、籌碼面</string>
+
+    <string name="text_2_profit">在股價下跌時買進，並以較長的時間等待股價上漲賺取價差。</string>
+    <string name="text_2_target">選擇穩健的個股及股價下跌的，但非選擇邁入衰退的個股。</string>
+    <string name="text_2_have_skills">財報分析、基本面</string>
+
+    <string name="text_3_profit">在股價上漲時買進，並以公司成長時帶動股價上漲來賺取價差。</string>
+    <string name="text_3_target">選擇擁有獲利成長及未來題材的個股。</string>
+    <string name="text_3_have_skills">財報分析、趨勢判斷、未來公司發展。</string>
+
+    <string name="text_4_profit">買進財務穩定且定期派發股利股息公司，並以參加公司分配收益賺取報酬。</string>
+    <string name="text_4_target">選擇穩健且有長期派息紀錄的公司。</string>
+    <string name="text_4_have_skills">財務分析、現金殖利率、基本面</string>
+
+
+</resources>
