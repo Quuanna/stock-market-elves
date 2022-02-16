@@ -1,8 +1,8 @@
-package com.mitake.finacialidea.data
+package com.mitake.finacialidea.data.constant
 
 
 
-enum class ObjectType {
+enum class UserSelectType {
     SHORT_TERM, // 短線投資
     VALUE_TYPE, // 價值型投資
     GROWTH_TYPE,  // 成長型投資

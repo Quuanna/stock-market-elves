@@ -1,14 +1,24 @@
 package com.mitake.finacialidea
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mitake.finacialidea.adapter.CardPagerAdapter
-import com.mitake.finacialidea.data.CardItem
-import com.mitake.finacialidea.data.ObjectType
+import com.mitake.finacialidea.data.constant.CardItem
+import com.mitake.finacialidea.data.constant.UserSelectType
 import com.mitake.finacialidea.databinding.ActivityCardMainBinding
-import com.mitake.finacialidea.viewpagercards.ShadowTransformer
+import com.mitake.finacialidea.viewPagercards.ShadowTransformer
+
 
 class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener {
+
+
+    companion object {
+        fun getActivityIntent(context: Context): Intent {
+            return Intent(context, MainActivity::class.java)
+        }
+    }
 
 
     private var mCardAdapter: CardPagerAdapter? = null
@@ -43,7 +53,7 @@ class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener 
                 R.string.text_1_profit,
                 R.string.text_1_target,
                 R.string.text_1_have_skills,
-                ObjectType.SHORT_TERM
+                UserSelectType.SHORT_TERM
             )
         )
         mCardAdapter?.addCardItem(
@@ -52,7 +62,7 @@ class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener 
                 R.string.text_2_profit,
                 R.string.text_2_target,
                 R.string.text_2_have_skills,
-                ObjectType.VALUE_TYPE
+                UserSelectType.VALUE_TYPE
             )
         )
         mCardAdapter?.addCardItem(
@@ -61,7 +71,7 @@ class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener 
                 R.string.text_3_profit,
                 R.string.text_3_target,
                 R.string.text_3_have_skills,
-                ObjectType.GROWTH_TYPE
+                UserSelectType.GROWTH_TYPE
             )
         )
         mCardAdapter?.addCardItem(
@@ -70,15 +80,15 @@ class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener 
                 R.string.text_4_profit,
                 R.string.text_4_target,
                 R.string.text_4_have_skills,
-                ObjectType.STABLE_INVESTMENT
+                UserSelectType.STABLE_INVESTMENT
             )
         )
     }
 
-    override fun onUserSelectResult(type: ObjectType) {
-
-        startActivity(InformationActivity.getActivityIntent(this, type))
-
+    override fun onUserSelectResult(type: UserSelectType) {
+        startActivity(StrategyActivity.getActivityIntent(this, type))
+        finish()
     }
+
 
 }

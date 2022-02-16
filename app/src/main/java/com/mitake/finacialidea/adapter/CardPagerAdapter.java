@@ -1,7 +1,6 @@
 package com.mitake.finacialidea.adapter;
 
 
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +14,9 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.mitake.finacialidea.R;
-import com.mitake.finacialidea.data.ObjectType;
-import com.mitake.finacialidea.viewpagercards.CardAdapter;
-import com.mitake.finacialidea.data.CardItem;
+import com.mitake.finacialidea.data.constant.UserSelectType;
+import com.mitake.finacialidea.viewPagercards.CardAdapter;
+import com.mitake.finacialidea.data.constant.CardItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +29,7 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     private final SelectResultListener mListener;
 
     public interface SelectResultListener {
-        void onUserSelectResult(ObjectType type);
+        void onUserSelectResult(UserSelectType type);
     }
 
     public CardPagerAdapter(SelectResultListener listener) {

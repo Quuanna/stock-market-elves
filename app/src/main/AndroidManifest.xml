@@ -29,7 +29,16 @@
 
         <activity
             android:name="com.mitake.finacialidea.MainActivity"
-            android:exported="true" />
+            android:exported="false" />
+
+        <activity
+            android:name="com.mitake.finacialidea.StrategyActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.mitake.finacialidea.StrategySuperbLackActivity"
+            android:exported="false" />
+
 
         <activity
             android:name=".MainFunActivity"

@@ -1,4 +1,4 @@
-package com.mitake.finacialidea.viewpagercards
+package com.mitake.finacialidea.viewPagercards
 
 import androidx.cardview.widget.CardView
 
