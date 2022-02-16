@@ -22,5 +22,54 @@
     <string name="text_4_target">選擇穩健且有長期派息紀錄的公司。</string>
     <string name="text_4_have_skills">財務分析、現金殖利率、基本面</string>
 
+    <string name="strategy_title">實際操作策略</string>
+    <string name="strategy_title_superb">策略優點</string>
+    <string name="strategy_title_lack">策略缺點</string>
 
+    <!--短線-->
+    <string name="strategy_content_short_term">・掌握技術面\n・掌握籌碼面\n・有紀律的執行</string>
+    <!--優點-->
+    <string name="strategy_content_short_term_superb">・能快速獲利\n
+        ・無需長時間將資金放置在股市\n
+        ・操作的範圍廣，能投資的機會多\n
+        ・資金流動性佳</string>
+    <!--缺點-->
+    <string name="strategy_content_short_term_lack">・獲利不穩定\n
+        ・耗費時間精力盯盤交易\n
+        ・若無法按照紀律執行，或著停損點設立不當，容易造成嚴重虧損。</string>
+
+    <!--價值-->
+    <string name="strategy_content_value_term">・基本面健康的公司\n・股價底點\n・每月有營收獲利\n・公司營收利益有成長</string>
+    <!--優點-->
+    <string name="strategy_content_value_term_superb">・無需長時間盯盤\n
+        ・無需頻繁交易\n
+        ・估算便宜價時買入，避免追高投資的風險</string>
+    <!--缺點-->
+    <string name="strategy_content_value_term_lack">・等待獲利時間較長，資金久放於股市\n
+        ・在下跌區間買進，需要承受短時間帳面的虧損\n
+        ・可能投資很長一段時間仍未有投資成效\n
+        ・無法在短時間內判斷錯誤，察覺自己錯估而選擇止損，需耗費一段時間觀察</string>
+
+    <!--成長-->
+    <string name="strategy_content_growth_term">・有題材和產業未來發展性\n・公司有投資研發\n・良好營運效率\n・穩定營收及持續成長</string>
+    <!--優點-->
+    <string name="strategy_content_growth_term_superb">・無需長時間盯盤\n
+        ・可以從顯著的股價及公司獲利數據做分析，可降低投資所承受的心理壓力\n
+        ・漲幅程度大，收益可觀</string>
+    <!--缺點-->
+    <string name="strategy_content_growth_term_lack">・股價波動大\n
+        ・可能投資到處於公司獲利及成長的末升段，因而獲利降低，風險增加\n
+        ・大概有機率不支付股利股息</string>
+
+    <!--穩定-->
+    <string name="strategy_content_sound_investment">・持續10年穩定配息\n・歷年營運穩定</string>
+    <!--優點-->
+    <string name="strategy_content_sound_investment_superb">・無需長時間盯盤\n
+        ・獲利穩定，波動較小\n
+        ・需承受的風險偏低\n
+        ・操作簡易</string>
+    <!--缺點-->
+    <string name="strategy_content_sound_investment_lack">・股價成長緩慢的機率大\n
+        ・投資人參與除息，未能填息等於賺股息賠價差\n
+        ・除息完，無法確切得知何時能填息。</string>
 </resources>
