@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corners_background"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="4Q21～1Q19"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/laySharesAreCheap"
+        app:layout_constraintBottom_toTopOf="@+id/laySharesAreCheap"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/laySharesAreCheap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_orange"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_money" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_subtitle_evaluation_analysis_01"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_01_content"/>
+
+            <TextView
+                android:id="@+id/tvStockPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layManagementCapacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_orange"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/laySharesAreCheap">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_operate" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_subtitle_evaluation_analysis_02"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubtitle01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_02_content_01"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvSubtitle02"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+            <TextView
+                android:id="@+id/tvRevenueGrowthRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle01"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle01"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle01"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_02_content_02"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/tvSubtitle01"
+                app:layout_constraintEnd_toStartOf="@id/tvSubtitle03"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+            <TextView
+                android:id="@+id/tvTotalAssetTurnover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle02"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle02"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle02"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_02_content_03"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/tvSubtitle02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+            <TextView
+                android:id="@+id/tvFinancialLeverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle03"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle03"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle03"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layEarningPower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_orange"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layManagementCapacity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_make_money" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_subtitle_evaluation_analysis_03"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubtitle21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="@string/btn_subtitle_evaluation_analysis_03_content_01"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvSubtitle22"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle2"/>
+
+            <TextView
+                android:id="@+id/tvEPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle21"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle21"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle21"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="@string/btn_subtitle_evaluation_analysis_03_content_02"
+                app:layout_constraintStart_toEndOf="@+id/tvSubtitle21"
+                app:layout_constraintEnd_toStartOf="@id/tvSubtitle23"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle2"/>
+
+            <TextView
+                android:id="@+id/tvROA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle22"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle22"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle22"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_03_content_03"
+                android:textColor="@color/black"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/tvSubtitle22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle2"/>
+
+            <TextView
+                android:id="@+id/tvROE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle23"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle23"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle23"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_orange"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layEarningPower">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_bargain" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_subtitle_evaluation_analysis_04"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubtitle31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_04_content_01"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvSubtitle32"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle3"/>
+
+            <TextView
+                android:id="@+id/tvPEratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle31"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle31"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle31"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_04_content_02"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/tvSubtitle31"
+                app:layout_constraintEnd_toStartOf="@id/tvSubtitle33"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle3"/>
+
+            <TextView
+                android:id="@+id/tvNetValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle32"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle32"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle32"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_subtitle_evaluation_analysis_04_content_03"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/tvSubtitle32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle3"/>
+
+            <TextView
+                android:id="@+id/tvYieldratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/tvSubtitle33"
+                app:layout_constraintEnd_toEndOf="@id/tvSubtitle33"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitle33"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

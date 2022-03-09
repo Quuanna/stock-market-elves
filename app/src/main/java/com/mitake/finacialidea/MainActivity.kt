@@ -3,12 +3,17 @@ package com.mitake.finacialidea
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.mitake.finacialidea.adapter.CardPagerAdapter
 import com.mitake.finacialidea.data.constant.CardItem
 import com.mitake.finacialidea.data.constant.UserSelectType
+import com.mitake.finacialidea.data.model.StockInfo
 import com.mitake.finacialidea.databinding.ActivityCardMainBinding
+import com.mitake.finacialidea.manager.valueType.ValueTypeManager
 import com.mitake.finacialidea.viewPagercards.ShadowTransformer
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener {
@@ -49,15 +54,6 @@ class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener 
     private fun setItem() {
         mCardAdapter?.addCardItem(
             CardItem(
-                R.string.title_1,
-                R.string.text_1_profit,
-                R.string.text_1_target,
-                R.string.text_1_have_skills,
-                UserSelectType.SHORT_TERM
-            )
-        )
-        mCardAdapter?.addCardItem(
-            CardItem(
                 R.string.title_2,
                 R.string.text_2_profit,
                 R.string.text_2_target,
@@ -89,6 +85,4 @@ class MainActivity : AppCompatActivity(), CardPagerAdapter.SelectResultListener 
         startActivity(StrategyActivity.getActivityIntent(this, type))
         finish()
     }
-
-
 }

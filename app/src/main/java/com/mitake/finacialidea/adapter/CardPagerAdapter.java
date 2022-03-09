@@ -100,9 +100,6 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
         tvContentSkills.setText(item.getHave_skills());
 
         switch (item.getSelectType()) {
-            case SHORT_TERM:
-                imageView.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.image_short_term));
-                break;
             case VALUE_TYPE:
                 imageView.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.image_value_type));
                 break;

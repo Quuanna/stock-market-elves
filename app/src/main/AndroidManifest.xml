@@ -36,16 +36,14 @@
             android:exported="false" />
 
         <activity
-            android:name="com.mitake.finacialidea.StrategySuperbLackActivity"
+            android:name="com.mitake.finacialidea.SteadyTypeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.mitake.finacialidea.ValueTypeActivity"
             android:exported="false" />
 
 
-        <activity
-            android:name=".MainFunActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DetailedActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

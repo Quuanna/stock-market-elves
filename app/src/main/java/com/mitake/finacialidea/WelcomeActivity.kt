@@ -1,10 +1,13 @@
 package com.mitake.finacialidea
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
 import android.util.Log
+import androidx.core.app.ActivityCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.mitake.api.*
 import com.mitake.finacialidea.databinding.ActivityWelcomeBinding
@@ -27,43 +30,53 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        doInit()
+
+        if (ActivityCompat.checkSelfPermission(
+                this, Manifest.permission.READ_PHONE_STATE
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            doInit()
+        }
     }
 
     private fun doInit() {
         //請在此Init方法中填入E-mail及體驗序號
-        ;        MitakeFinance.init(this, "quewenan@mitake.com.tw", "beb607ff45daab2cf5b021d49805348b", object :
-            IInitListener {
-            override fun onResult(code: String?, message: String?) {
-                if (code == MitakeFinance.SUCCESS) {
-                    CoroutineScope(Dispatchers.Main).launch {
-                        Log.d("doInit onResult: ", "$code:$message")
-                        MitakeFinance.getInstance().addConnectListener(netWorkListener)
-                        //初始化成功後才可以使用登入功能
-                        mBinding.tvStatus.text = "SDK 初始化成功"
-                        doLogin()
-                    }
-                } else {
-                    if (!isFinishing) {
-                        mBinding.tvStatus.text = "$code:$message"
-                        Log.d("doInit error: ", "$code:$message")
+        MitakeFinance.init(
+            this,
+            "quewenan@mitake.com.tw",
+            "beb607ff45daab2cf5b021d49805348b",
+            object :
+                IInitListener {
+                override fun onResult(code: String?, message: String?) {
+                    if (code == MitakeFinance.SUCCESS) {
+                        CoroutineScope(Dispatchers.Main).launch {
+                            Log.d("doInit onResult: ", "$code:$message")
+                            MitakeFinance.getInstance().addConnectListener(netWorkListener)
+                            //初始化成功後才可以使用登入功能
+                            mBinding.tvStatus.text = "SDK 初始化成功"
+                            doLogin()
+                        }
+                    } else {
+                        if (!isFinishing) {
+                            mBinding.tvStatus.text = "$code:$message"
+                            Log.d("doInit error: ", "$code:$message")
 
-                        runOnUiThread {
-                            MaterialAlertDialogBuilder(this@WelcomeActivity)
-                                .setMessage(message)
-                                .setNegativeButton("重新連線") { dialog, _ ->
-                                    doInit()
-                                    dialog.dismiss()
-                                }.show()
+                            runOnUiThread {
+                                MaterialAlertDialogBuilder(this@WelcomeActivity)
+                                    .setMessage(message)
+                                    .setNegativeButton("重新連線") { dialog, _ ->
+                                        doInit()
+                                        dialog.dismiss()
+                                    }.show()
+                            }
                         }
                     }
                 }
-            }
 
-            override fun event(m: Message?) {
+                override fun event(m: Message?) {
 
-            }
-        })
+                }
+            })
     }
 
     private fun doLogin() {
@@ -82,7 +95,7 @@ class WelcomeActivity : AppCompatActivity() {
 
                     } else {
                         mBinding.tvStatus.text = "SDK 登入失敗"
-                        Log.d("doInit onResult:","SDK登入失敗")
+                        Log.d("doInit onResult:", "SDK登入失敗")
                     }
                 }
             }

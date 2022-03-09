@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_color2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -20,6 +21,7 @@
         android:layout_height="wrap_content"
         android:text="@string/strategy_title"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +30,11 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvContent"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/strategy_content_growth_term"
+        android:text="@string/strategy_content_value_term"
         android:textSize="18dp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -41,7 +44,7 @@
         android:id="@+id/btnNextPage"
         android:layout_width="176dp"
         android:layout_height="99dp"
-        android:background="@drawable/ic_btn_dialog1"
+        android:background="@drawable/ic_btn_goto_main"
         android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/hiView"/>
@@ -50,7 +53,7 @@
         android:id="@+id/hiView"
         android:layout_width="157dp"
         android:layout_height="218dp"
-        android:background="@drawable/ic_robot_introduce"
+        android:background="@drawable/ic_robot_main"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/corners_background">
+
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="評估公司的獲利能力"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/layout01"
+        app:layout_constraintBottom_toTopOf="@id/layout01"/>
+
+    <TextView
+        android:id="@+id/tvTimeRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4Q21～1Q19"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="@id/tvSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvSubtitle" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_baseline_arrow_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/title"
+            app:layout_constraintTop_toTopOf="@id/title"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_term_profitability_subtitle_01"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"/>
+
+        <TextView
+            android:id="@+id/growthRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成長率"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="@id/title"/>
+
+
+        <TextView
+            android:id="@+id/tvGrowthRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/growthRate"
+            app:layout_constraintBottom_toBottomOf="@id/growthRate"
+            app:layout_constraintStart_toEndOf="@id/growthRate"/>
+
+        <TextView
+            android:id="@+id/tvExplanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_term_management_capacity_subtitle_01_high"
+            android:textColor="@color/green"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/growthRate"
+            app:layout_constraintTop_toBottomOf="@id/growthRate"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout01">
+
+        <ImageView
+            android:id="@+id/image02"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_baseline_arrow_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/title02"
+            app:layout_constraintTop_toTopOf="@id/title02"/>
+
+        <TextView
+            android:id="@+id/title02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_term_profitability_subtitle_02"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image02"/>
+
+        <TextView
+            android:id="@+id/growthRate02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成長率"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/title02"
+            app:layout_constraintStart_toStartOf="@id/title02"/>
+
+        <TextView
+            android:id="@+id/tvGrowthRate02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/growthRate02"
+            app:layout_constraintBottom_toBottomOf="@id/growthRate02"
+            app:layout_constraintStart_toEndOf="@id/growthRate02"/>
+
+        <TextView
+            android:id="@+id/tvExplanation02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_term_management_capacity_subtitle_02_high"
+            android:textColor="@color/green"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/growthRate02"
+            app:layout_constraintTop_toBottomOf="@id/growthRate02"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout02">
+
+        <ImageView
+            android:id="@+id/image03"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_baseline_arrow_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/title03"
+            app:layout_constraintTop_toTopOf="@id/title03"/>
+
+        <TextView
+            android:id="@+id/title03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_term_profitability_subtitle_03"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image03"/>
+
+
+        <TextView
+            android:id="@+id/growthRate03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成長率"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/title03"
+            app:layout_constraintStart_toStartOf="@id/title03"/>
+
+
+        <TextView
+            android:id="@+id/tvGrowthRate03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/growthRate03"
+            app:layout_constraintBottom_toBottomOf="@id/growthRate03"
+            app:layout_constraintStart_toEndOf="@id/growthRate03"/>
+
+        <TextView
+            android:id="@+id/tvExplanation03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_term_management_capacity_subtitle_03_high"
+            android:textColor="@color/green"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/growthRate03"
+            app:layout_constraintTop_toBottomOf="@id/growthRate03"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

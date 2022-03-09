@@ -39,11 +39,9 @@
         ・若無法按照紀律執行，或著停損點設立不當，容易造成嚴重虧損。</string>
 
     <!--價值-->
-    <string name="strategy_content_value_term">・基本面健康的公司\n・股價底點\n・每月有營收獲利\n・公司營收利益有成長</string>
+    <string name="strategy_content_value_term">・基本面健康的公司\n・股價底點\n・公司營收利益有成長</string>
     <!--優點-->
-    <string name="strategy_content_value_term_superb">・無需長時間盯盤\n
-        ・無需頻繁交易\n
-        ・估算便宜價時買入，避免追高投資的風險</string>
+    <string name="strategy_content_value_term_superb">・無需長時間盯盤\n・無需頻繁交易\n・估算便宜價時買入，避免追高</string>
     <!--缺點-->
     <string name="strategy_content_value_term_lack">・等待獲利時間較長，資金久放於股市\n
         ・在下跌區間買進，需要承受短時間帳面的虧損\n
@@ -72,4 +70,81 @@
     <string name="strategy_content_sound_investment_lack">・股價成長緩慢的機率大\n
         ・投資人參與除息，未能填息等於賺股息賠價差\n
         ・除息完，無法確切得知何時能填息。</string>
+
+
+    <!--關鍵指標-->
+    <string name="main_title_key_indicator_value_term">關鍵指標 - 目標賺差價(低價買進)</string>
+    <string name="main_title_key_indicator_growth_term">關鍵指標 - 目標賺差價(持續成長)</string>
+    <string name="main_title_key_indicator_sound_investment">關鍵指標 - 目標領利息(長期持有)</string>
+
+    <!--btn Title-->
+    <string name="btn_title_evaluation_analysis">投資評估</string>
+    <string name="btn_subtitle_evaluation_analysis_01">股價便宜計算</string>
+    <string name="btn_subtitle_evaluation_analysis_01_content"> 本益成長比(PEG) ＝ 本益比 / 稅後淨利成長率</string>
+    <string name="btn_subtitle_evaluation_analysis_02">檢視公司經營能力</string>
+    <string name="btn_subtitle_evaluation_analysis_02_content_01">營收年增率</string>
+    <string name="btn_subtitle_evaluation_analysis_02_content_02">總資產週轉率</string>
+    <string name="btn_subtitle_evaluation_analysis_02_content_03">財務槓桿</string>
+    <string name="btn_subtitle_evaluation_analysis_03">檢視公司賺錢能力</string>
+    <string name="btn_subtitle_evaluation_analysis_03_content_01">EPS\n(每股盈餘)</string>
+    <string name="btn_subtitle_evaluation_analysis_03_content_02">ROA\n(資產報酬率)</string>
+    <string name="btn_subtitle_evaluation_analysis_03_content_03">ROE\n(股東權益報酬率)</string>
+    <string name="btn_subtitle_evaluation_analysis_04">股價是否適合買入</string>
+    <string name="btn_subtitle_evaluation_analysis_04_content_01">本益比</string>
+    <string name="btn_subtitle_evaluation_analysis_04_content_02">股價淨值比</string>
+    <string name="btn_subtitle_evaluation_analysis_04_content_03">殖利率</string>
+
+
+    <string name="btn_title_evaluation_fundamentals">經營能力</string>
+    <string name="btn_title_evaluation_financial_report_analysis">獲利能力</string>
+    <string name="btn_title_evaluation_financial_yield">殖利率</string>
+    <string name="btn_title_evaluation_stock_information">個股資訊</string>
+    <string name="btn_title_evaluation_finance_analysis">財務診斷</string>
+    <string name="btn_title_evaluation_future_company_development_analysis">未來發展</string>
+    <string name="btn_title_evaluation_profit_analysis">現金殖利率</string>
+
+    <!--價值-->
+    <string name="value_term_target_01">稅後淨利率 3年平均大於5％</string>
+    <string name="value_term_target_02">營益率 3年平均大於5％</string>
+    <string name="value_term_target_03">ROE 3年平均大於5％</string>
+    <string name="value_term_target_04">負債比率 小於50％</string>
+    <string name="value_term_target_05">流動比率至少150％</string>
+    <string name="value_term_target_06">價格/淨值比 小於2</string>
+    <string name="value_term_target_07">本益比 小於20</string>
+
+    <string-array name="tCABjrank9">
+        <item>季毛利率排行</item>
+        <item>季營利率排行</item>
+        <item>季EPS排行</item>
+        <item>季EPS創新高</item>
+        <item>季轉虧為盈</item>
+    </string-array>
+
+    <string name="value_term_management_capacity_subtitle_01">存貨周轉率</string>
+    <string name="value_term_management_capacity_subtitle_01_high">升高就代表銷售能力上升</string>
+    <string name="value_term_management_capacity_subtitle_01_low">降低代表銷售能力衰退</string>
+    <string name="value_term_management_capacity_subtitle_02">應收帳款周轉率</string>
+    <string name="value_term_management_capacity_subtitle_02_high">收款速度越快，產品越好、銷售能力佳，客戶不易欠款</string>
+    <string name="value_term_management_capacity_subtitle_02_low">收款速度越慢，資金就容易被卡死變成呆帳</string>
+    <string name="value_term_management_capacity_subtitle_03">固定資產周轉率</string>
+    <string name="value_term_management_capacity_subtitle_03_high">週轉率上升產品單位成本下降，獲利能力就提升</string>
+    <string name="value_term_management_capacity_subtitle_03_low">週轉率下滑產品單位成本會上升，獲利能力就下降</string>
+    <string name="value_term_management_capacity_subtitle_04">總資產周轉率</string>
+    <string name="value_term_management_capacity_subtitle_04_final">數值愈高愈好，反映公司整體的\n經營能力綜合效率</string>
+
+    <string name="value_term_profitability_subtitle_01">營業毛利率</string>
+    <string name="value_term_profitability_subtitle_01_high">毛利率高，通常代表盈利能力較強</string>
+    <string name="value_term_profitability_subtitle_01_low">毛利率低，只要原物料價格上漲多一點，或產品的市場價格\n下跌一點，就容易發生虧損哦</string>
+    <string name="value_term_profitability_subtitle_02">營業利益率</string>
+    <string name="value_term_profitability_subtitle_02_high">營益率越高，表示公司管理和銷售能力越好\n，本業賺錢能力越強</string>
+    <string name="value_term_profitability_subtitle_02_low">營益率越低，表示公司管銷能力不佳</string>
+    <string name="value_term_profitability_subtitle_03">稅後淨利率</string>
+    <string name="value_term_profitability_subtitle_03_high">淨利率越越高，衡量企業的獲利能力強，需注意確認\n是否為業外收入提高</string>
+    <string name="value_term_profitability_subtitle_03_low">淨利率越越低，企業的獲利能力不佳</string>
+
+    <!--成長-->
+
+
+    <!--穩定-->
+
 </resources>
