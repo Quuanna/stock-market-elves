@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -14,14 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.mitake.finacialidea.adapter.StockPageAdapter
 import com.mitake.finacialidea.data.model.StockInfo
 import com.mitake.finacialidea.data.constant.UserSelectType
-import com.mitake.finacialidea.databinding.ActivityInformationBinding
 import com.mitake.finacialidea.databinding.ActivitySteadyBinding
 import com.mitake.finacialidea.fragment.*
 import com.mitake.finacialidea.fragment.valueType.EvaluationAnalysisFragment
 import com.mitake.finacialidea.fragment.valueType.ManagementCapacityFragment
-import com.mitake.finacialidea.fragment.valueType.ProfitabilityFragment
 import com.mitake.finacialidea.manager.valueType.SteadyTypeManager
-import com.mitake.finacialidea.manager.valueType.ValueTypeManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -137,9 +132,6 @@ class SteadyTypeActivity : AppCompatActivity(), View.OnClickListener,
                 getManagementCapacity(mStockInfoItme)
             }
             R.id.btnProfitability -> {
-                getProfitability(mStockInfoItme)
-            }
-            R.id. btnYield -> {
                 getYield(mStockInfoItme)
             }
             R.id.btnStockInfo -> {
@@ -170,7 +162,6 @@ class SteadyTypeActivity : AppCompatActivity(), View.OnClickListener,
         mBinding.btnManagementCapacity.setBackgroundColor(resources.getColor(R.color.gray, null))
         mBinding.btnProfitability.setBackgroundColor(resources.getColor(R.color.gray, null))
         mBinding.btnStockInfo.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnYield.setBackgroundColor(resources.getColor(R.color.gray, null))
         showDataFragment(stockItem, EvaluationAnalysisFragment())
         mBinding.progressBar.isVisible = false
     }
@@ -188,28 +179,10 @@ class SteadyTypeActivity : AppCompatActivity(), View.OnClickListener,
         )
         mBinding.btnProfitability.setBackgroundColor(resources.getColor(R.color.gray, null))
         mBinding.btnStockInfo.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnYield.setBackgroundColor(resources.getColor(R.color.gray, null))
         showDataFragment(stockItem, ManagementCapacityFragment())
         mBinding.progressBar.isVisible = false
     }
 
-    /**
-     * 獲利能力
-     */
-    fun getProfitability(stockItem: StockInfo?) {
-        mBinding.btnEvaluationAnalysis.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnManagementCapacity.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnProfitability.setBackgroundColor(
-            resources.getColor(
-                R.color.btn_title_background,
-                null
-            )
-        )
-        mBinding.btnStockInfo.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnYield.setBackgroundColor(resources.getColor(R.color.gray, null))
-        showDataFragment(stockItem, ProfitabilityFragment())
-        mBinding.progressBar.isVisible = false
-    }
 
     /**
      * 個股資訊
@@ -224,7 +197,6 @@ class SteadyTypeActivity : AppCompatActivity(), View.OnClickListener,
                 null
             )
         )
-        mBinding.btnYield.setBackgroundColor(resources.getColor(R.color.gray, null))
         showDataFragment(stockItem, BasicInfoFragment())
         mBinding.progressBar.isVisible = false
     }
@@ -235,10 +207,9 @@ class SteadyTypeActivity : AppCompatActivity(), View.OnClickListener,
     fun getYield(stockItem: StockInfo?) {
         mBinding.btnEvaluationAnalysis.setBackgroundColor(resources.getColor(R.color.gray, null))
         mBinding.btnManagementCapacity.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnProfitability.setBackgroundColor(resources.getColor(R.color.gray, null))
+        mBinding.btnProfitability.setBackgroundColor(resources.getColor(R.color.btn_title_background, null))
         mBinding.btnStockInfo.setBackgroundColor(resources.getColor(R.color.gray, null))
-        mBinding.btnYield.setBackgroundColor(resources.getColor(R.color.btn_title_background, null))
-        showDataFragment(stockItem, BasicInfoFragment())
+        showDataFragment(stockItem, YieldFragment())
         mBinding.progressBar.isVisible = false
     }
 }

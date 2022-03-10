@@ -37,7 +37,7 @@ object SteadyTypeManager {
             if (getTCABjrankn7().isNotEmpty()) {
                 for (i in 0 until getTCABjrankn7().size) {
                     val item = getTCABjrankn7()[i]
-                    getDividendHistory(item.code) { code, _ ->  // 現金股利殖利率 >= 5、連續發股利超過10年
+                    getDividendHistory(item.code) { code, _ ->  // 連續發股利超過5年
                         code?.also { stockCode ->
                             getTCSpNewFinRatio3(stockCode) { code, _ -> //  營收成長率(正)
                                 code?.also {
@@ -134,24 +134,24 @@ object SteadyTypeManager {
                     val data = response.data.dividendHistories
                     val list = arrayListOf<DividendHistories>()
 
-                    for (i in 0 until data.size) {
+                    for (i in 0 until data.subList(0, 5).size) {
                         val item = data[i]
 
-                        if (item.cashDividendYield >= 5) {
-                            if (item.cashDividend > 0 || item.stockDividend > 0) {
-                                list.add(
-                                    DividendHistories(
-                                        item.cashDividend,
-                                        item.cashDividendPayoutRatio,
-                                        item.cashDividendYield,
-                                        item.stockDividend,
-                                        item.year
-                                    )
+                        if (item.cashDividend > 0 || item.stockDividend > 0) {
+                            list.add(
+                                DividendHistories(
+                                    item.cashDividend,
+                                    item.cashDividendPayoutRatio,
+                                    item.cashDividendYield,
+                                    item.stockDividend,
+                                    item.year
                                 )
-                            }
+                            )
+                            result(code, list)
+                        } else {
+                            result(null, null)
                         }
                     }
-                    result(code, list)
                 } else {
                     result(null, null)
                 }
